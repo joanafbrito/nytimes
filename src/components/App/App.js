@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStatem, useEffect } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
-// import Header from './Header/Header';
+import Header from '../Header/Header';
 // import Footer from './Footer/Footer';
 // import AllNews from './AllNews/AllNews';
 import logo from '../../logo.svg';
@@ -17,9 +17,9 @@ function App() {
       <Switch>
         <Route exact path='/' render={() => (
           <header className="App-header">
-          {/* <Header/>
-          <AllNews/>
-          <Footer/> */}
+          <Header/>
+          {/* <AllNews/> */}
+          {/* <Footer/> */}
             <img src={logo} className="App-logo" alt="logo" />
             <p>
               <code>I'm working great!!!</code> 
