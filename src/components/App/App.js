@@ -2,8 +2,8 @@ import React from 'react';
 import { useStatem, useEffect } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import Header from '../Header/Header';
-// import Footer from './Footer/Footer';
-// import AllNews from './AllNews/AllNews';
+import Footer from '../Footer/Footer';
+// import AllNews from '../AllNews/AllNews';
 import logo from '../../logo.svg';
 import './App.css';
 
@@ -19,11 +19,11 @@ function App() {
           <div>
             <Header/>
             {/* <AllNews/> */}
-            {/* <Footer/> */}
               <img src={logo} className="App-logo" alt="logo" />
               <p>
                 <code>I'm working great!!!</code> 
               </p>
+            <Footer/>
             </div>
           )}/> 
         <Route exact path='/all-news/:id' render={() => (
