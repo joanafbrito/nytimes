@@ -1,0 +1,10 @@
+.footer {
+    background-color: turquoise;
+    height: 10vh;
+    text-align: center;
+}
+
+.nytimes-footer {
+    font-size: 15px;
+    margin:0;
+}
