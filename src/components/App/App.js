@@ -16,15 +16,17 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path='/' render={() => (
-          <div>
+          <section className='full-page'>
             <Header/>
             {/* <AllNews/> */}
+            <main className='main-body'>
               <img src={logo} className="App-logo" alt="logo" />
               <p>
                 <code>I'm working great!!!</code> 
               </p>
+            </main>
             <Footer/>
-            </div>
+            </section>
           )}/> 
         <Route exact path='/all-news/:id' render={() => (
             <a
