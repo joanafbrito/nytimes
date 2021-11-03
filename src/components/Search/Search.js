@@ -1,9 +1,9 @@
 import React from 'react';
-// import './Search.css';
+import './Search.css';
 
 const Search = () => {
     return (
-        <form className='search-fiel'>
+        <form className='search-field'>
             <input
                 className='search-bar'
                 type='search'
@@ -17,8 +17,7 @@ const Search = () => {
                 type='submit'
                 // onClick={() => handleClick()}
             >
-                <img className='mag-glass' src='https://cdn2.vectorstock.com/i/1000x1000/33/01/magnifying-glass-orange-round-search-icon-vector-20353301.jpg' alt='Search Magnifying Glass'/>
-
+                <img className='mag-glass' src='https://media.istockphoto.com/vectors/magnifying-glass-icon-vector-id1179358933' alt='Search Magnifying Glass'/>
             </button>
         </form>
     )
