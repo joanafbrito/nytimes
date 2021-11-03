@@ -7,12 +7,12 @@ background-color: aqua;
 width: 100vw;
 }
 
-.company-name a {
+a .company-name {
     margin: 0;
     color: black;
 }
 
-.company-name a:hover {
+a .company-name:hover {
     margin: 0;
     color: white;
 }
