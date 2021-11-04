@@ -4,8 +4,8 @@ import { Route, Switch, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { getNewsData } from '../../utils/apiCalls';
-// import AllNews from '../AllNews/AllNews';
-import logo from '../../logo.svg';
+import AllNews from '../AllNews/AllNews';
+// import logo from '../../logo.svg';
 import './App.css';
 
 const App = () => {
@@ -65,11 +65,8 @@ useEffect(() => {
                 <h1> Loading ... </h1>
               ) : (
               <main className='main-body'>
-                {/* <AllNews/> */}
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                  <code>I'm working great!!!</code> 
-                </p>
+                <img className='nytimes-logo' src='https://www.thetascgroup.com/tasc-media/uploads/2020/04/new-york-times-logo-large-e1439227085840.jpg' alt="logo" />
+                <AllNews newsData={ news } key={ 1 }/>
               </main> )
            }
             <Footer/>
