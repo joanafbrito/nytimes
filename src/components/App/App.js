@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStatem, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -7,9 +7,41 @@ import Footer from '../Footer/Footer';
 import logo from '../../logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+
+const [news, setNews] = useState('')
+const [error, setError] = useState('')
+const [isLoading, setLoading] = useState(false)
 
 
+
+// const invokeNewsData = async() => {
+//   setLoading(true)
+//   try {
+//     const res = await getNewsData()
+//     checkErrors(res)
+//     const returnedNews = await res.json()
+//     console.log(returnedNews)
+//     setNews(returnedNews)      
+//   } catch (err) {
+//     console.log(`Error: ${err}`)
+//   }
+// }
+
+
+const checkErrors = (res) => {
+  if (!res.ok) {
+    setError(res.status)
+  }
+}
+
+// const clearError = () => {
+//   setError('')
+// }
+
+// useEffect(() => {
+//   invokeNewsData()  
+// }, [news])
 
 
   return (
