@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Search from '../Search/Search';
 import './Header.css';
 
-const Header = () => {
+const Header = (params) => {
+
     return (
         <header className='header'>
             <Link to='/'>
                 <h1 className='company-name'>NY Times</h1>
             </Link>
-            {/* <p className='search'> search </p> */}
-            <Search/>
+            {/* <Search getCategoryInput= {(userInput) => setUserInput(updateCategory)}/> */}
+            <Search getCategoryInput= {params.updateCategory}/>
 
         </header>
     )
