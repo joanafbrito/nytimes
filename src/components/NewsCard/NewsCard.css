@@ -1,15 +1,24 @@
 .article-card {
     display: flex;
+    margin: 1em;
 }
 
-.article-card-container{
-    width: 200px;
+.article-card-container {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    
 }
 
 .article-card-img {
-    width: 30%;
+    width: 60%;
 }
-                    /* <h3 className='article-card-title'>{ title }</h3>
-                    <p className='article-card-author'> { author }</p>
-                    <p className='article-card-category'> { category }</p>
-                    <p className='article-card-snippet' */
+
+.p-card-container {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}

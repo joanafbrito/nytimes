@@ -2,8 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 4em;
+    margin:  0 4em;
     align-items: center;
     overflow-y: scroll;
     text-align: left;
+    background-color: #cccccc3d;
+    border-radius: 3px;
 }

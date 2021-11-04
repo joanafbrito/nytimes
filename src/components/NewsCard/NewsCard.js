@@ -8,9 +8,11 @@ const NewsCard = ({ id, category, title, author, snippet, img }) => {
             <article className='article-card'>
                 <div className='article-card-container'>
                     <img className='article-card-img' src={ img } alt={ title }/>
-                    <p className='article-card-category'> { category }</p>
-                    <p className='article-card-author'> { author }</p>
-                    <h3 className='article-card-title'>{ title }</h3>
+                    <div className='p-card-container'>
+                        <p className='article-card-category'> { category }</p>
+                        <p className='article-card-author'> { author }</p>
+                        <h3 className='article-card-title'>{ title }</h3>
+                    </div>
                     {/* <p className='article-card-snippet'> { snippet}</p> */}
                 </div>
 
