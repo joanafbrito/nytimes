@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Search.css';
 
 const Search = () => {
+
+    const [userInput, setUserInput] = useState('')
+
+    const handleSubmit = (e) => {
+        e.prevent.default()
+    }
+
     return (
-        <form className='search-field'>
+        <form className='search-field' onSubmit={ handleSubmit}>
             <input
                 className='search-bar'
-                type='search'
+                type='text'
                 placeholder='SEARCH'
                 name='userInput'
                 // value={userInput}
-                // onChange={(e) => setUserInput(e.target.value)}
+                onChange={(e) => setUserInput(e.target.value)}
             />
             <button 
                 className='search-btn'
