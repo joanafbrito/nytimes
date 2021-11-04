@@ -8,7 +8,7 @@ const Search = ({ getCategoryInput }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         getCategoryInput(userInput)
-        setUserInput('')
+        // setUserInput('')
     }
 
 

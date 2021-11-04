@@ -4,9 +4,11 @@ import './AllNews.css';
 
 const AllNews = ({ newsData }) => {
 
+    console.log('i am at the beggining ',newsData)
+
     const articlesData = newsData.map((article) => {
-       const imgUrl = article.multimedia[0].url
-       const img = `https://www.nytimes.com/${imgUrl}`
+       let imgUrl = article.multimedia[0].url
+       let img = `https://www.nytimes.com/${imgUrl}`
     // https://www.nytimes.com/images/2021/10/27/sports/27transgender-athletes-1/merlin_195051300_d630eead-3c9b-4d79-a243-742d1a12033d-blog480.jpg
         
         return (

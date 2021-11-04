@@ -66,13 +66,13 @@ useEffect(() => {
               ) : (
               <main className='main-body'>
                 <img className='nytimes-logo' src='https://www.thetascgroup.com/tasc-media/uploads/2020/04/new-york-times-logo-large-e1439227085840.jpg' alt="logo" />
-                <AllNews newsData={ news } key={ 1 }/>
+                <AllNews newsData={ news } key={ news.length }/>
               </main> )
            }
             <Footer/>
             </section>
           )}/> 
-        <Route exact path='/all-news/:id' render={() => (
+        {/* <Route exact path='/all-news/:id' render={() => (
             <a
               className="App-link"
               href="https://reactjs.org"
@@ -81,7 +81,7 @@ useEffect(() => {
             >
               Learn React
             </a>
-          )} />
+          )} /> */}
        
       </Switch>
     </div>

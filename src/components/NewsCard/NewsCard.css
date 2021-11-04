@@ -3,11 +3,11 @@
 }
 
 .article-card-container{
-    width: 400px;
+    width: 200px;
 }
 
 .article-card-img {
-    width: 40%;
+    width: 30%;
 }
                     /* <h3 className='article-card-title'>{ title }</h3>
                     <p className='article-card-author'> { author }</p>

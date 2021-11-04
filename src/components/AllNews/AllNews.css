@@ -1,3 +1,9 @@
 .all-news {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 4em;
+    align-items: center;
+    overflow-y: scroll;
+    text-align: left;
 }
