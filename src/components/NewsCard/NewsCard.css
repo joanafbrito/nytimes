@@ -1,0 +1,15 @@
+.article-card {
+    display: flex;
+}
+
+.article-card-container{
+    width: 400px;
+}
+
+.article-card-img {
+    width: 40%;
+}
+                    /* <h3 className='article-card-title'>{ title }</h3>
+                    <p className='article-card-author'> { author }</p>
+                    <p className='article-card-category'> { category }</p>
+                    <p className='article-card-snippet' */
