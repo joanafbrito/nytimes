@@ -2,20 +2,24 @@ import React from 'react';
 import './TopNews.css';
 
 const TopNews = ({ topNewsData }) => {
-    console.log('top news ', topNewsData)
-    
+
+    const randomTopNew = topNewsData[Math.floor(Math.random()*topNewsData.length)];
+    let topNewImg = randomTopNew.multimedia[0].url
+
     return (
-        
-            <article className='article-details'>
-                <div className='article-details-container'>
-                    <img className='article-details-img' src={ img } alt={ title }/>
-                    <div className='p-details-container'>
-                        <p className='article-details-category'> Section: { category }</p>
-                        <p className='article-details-author'> { author }</p>
-                        <p className='article-details-date'> { date }</p>
-                        <h3 className='article-details-title'>{ title }</h3>
+       
+            <article className='topNew'>
+                <div className='topNew-container'>
+                    <img className='topNew-img' src={ topNewImg } alt={ randomTopNew.title }/>
+                    <div className='p-topNew-container'>
+                        <h3 className='topNew-title'>{ randomTopNew.title }</h3>
+                        <p className='topNew-section'> Section: toUpperCase({ randomTopNew.section })</p>
+                        <p className='topNew-author'> { randomTopNew.author }</p>
+                        {/* <p className='randomTopNew-card-date'> { randomTopNew. }</p> */}
+                        <a className='topNew-url' href ={ randomTopNew.url} >The New York Times Article </a> 
                     </div>
                 </div>
+
             </article>
     )
 }
