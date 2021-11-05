@@ -2,6 +2,7 @@
     display: flex;
     margin: 1em;
     width: 50vw;
+    justify-content: center;
 }
 
 .article-card-container {
