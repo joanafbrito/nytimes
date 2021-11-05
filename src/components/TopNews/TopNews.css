@@ -1,0 +1,28 @@
+.topNew {
+    display: flex;
+    width: 100vw;
+    /* margin: 4em; */
+    justify-content: center;
+}
+
+.topNew-container {
+    width: 50%;
+    /* width: 600px; */
+    /* height: 250px; */
+    display: flex;
+    /* flex-direction: row-reverse; */
+    
+}
+
+.topNew-img {
+    width: 80%;
+}
+
+.p-topNew-container {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: wheat;
+    padding: 3em;
+}
