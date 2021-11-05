@@ -14,6 +14,7 @@ const App = () => {
   const [news, setNews] = useState('');
   const [topNews, setTopNews] = useState('')
   const [category, setCategory] = useState("everything")
+  const [selectedNews, setSelectedNews] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +26,6 @@ const App = () => {
       const returnedNews = await res.json();
       console.log('news ----',returnedNews.response.docs);
       setNews(returnedNews.response.docs);
-      // setCategory(category)
       setIsLoading(false);
     } catch (err) {
       console.log(`Error: ${err}`);
@@ -58,10 +58,13 @@ const App = () => {
   // }
 
   const updateCategory = (input) => {
-    // console.log(input);
     setCategory(input);
-    // invokeNewsData(input)
   };
+
+  const findSelectedNews = (id) => {
+    const selectedNews =  news.data.find(article => article.id === id)  
+    setSelectedNews(selectedNews)
+  }
 
   useEffect(()=> {
     invokeTopNewsData();
@@ -69,7 +72,6 @@ const App = () => {
 
   useEffect(() => {
     invokeNewsData();
-    // invokeTopNewsData();
   }, [category]);
 
   return (
@@ -90,24 +92,34 @@ const App = () => {
                     alt="logo"
                   />
                   <TopNews topNewsData={ topNews }/>
-                  <p>{ topNews[2].title }</p>   
-                  <AllNews newsData={news} key={news.length} />
+                  <p>{ topNews[0].title }</p>   
+                  <AllNews newsData={news} key={news.length} findSelectedNews={findSelectedNews}/>
                 </main>
               }
               <Footer />
             </section>
           )}
         />
-        {/* <Route exact path='/:id' render={() => (
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          )} /> */}
+        <Route exact path='/:id' render={({ match }) => {
+          const newsId = match.params.id;
+          return (
+          <section className="full-page">
+              <Header updateCategory={updateCategory} />
+              {(isLoading && !error) && <Loading />}
+              {(!isLoading && !error && news && topNews) && 
+                <main className="main-body">
+                  <img
+                    className="nytimes-logo"
+                    src="https://www.thetascgroup.com/tasc-media/uploads/2020/04/new-york-times-logo-large-e1439227085840.jpg"
+                    alt="logo"
+                  />
+                  <p>I'm in the second page { topNews[2].title }</p>   
+                  <p>{newsId}</p>
+                </main>
+              }
+              <Footer />
+            </section>
+          )}} />
       </Switch>
     </div>
   );

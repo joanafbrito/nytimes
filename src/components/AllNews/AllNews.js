@@ -2,7 +2,7 @@ import React from "react";
 import NewsCard from "../NewsCard/NewsCard";
 import "./AllNews.css";
 
-const AllNews = ({ newsData }) => {
+const AllNews = ({ newsData, findSelectedNews }) => {
 
   const articlesData = newsData.map((article) => {
     let imgUrl = article.multimedia[9].url;
@@ -13,11 +13,12 @@ const AllNews = ({ newsData }) => {
         key={article.id}
         id={article.id}
         category={article.section_name}
-        title={ article.headline.main}
+        title={article.headline.main}
         author={article.byline.original}
         snippet={article.snippet}
         date={article.pub_date}
         img={img}
+        findSelectedNews={findSelectedNews}
       />
     );
   });
