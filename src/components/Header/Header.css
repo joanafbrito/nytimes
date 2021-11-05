@@ -6,7 +6,7 @@
     justify-content: space-around;
     height: 12vh;
     background-color: #034667bf;
-    width: 100vw;
+    /* width: 100vw; */
     padding: 0 5px;
 }
 
@@ -16,7 +16,6 @@
 
 a .company-name {
     margin: 0;
-    /* margin-left: 40px; */
     color: black;
 }
 
