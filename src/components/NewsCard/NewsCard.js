@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import './NewsCard.css';
 
 const NewsCard = ({ id, category, title, author, date, snippet, img, findSelectedNews }) => {
-    let d = date.split('T')
-    console.log('here ', d)
+    
     return (
         <Link className='link-to-article-details' to={`/${id}`} onClick={() => {findSelectedNews(id)}} >
             <article className='article-card'>
