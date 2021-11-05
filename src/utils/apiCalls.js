@@ -11,6 +11,18 @@ export const getNewsData = async (category) => {
     // https://www.nytimes.com/images/2021/10/27/sports/27transgender-athletes-1/merlin_195051300_d630eead-3c9b-4d79-a243-742d1a12033d-blog480.jpg
 }
 
+export const getTopNewsData = async () => {
+    let key = 'G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
+    let url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${key}`
+    // let url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=sports&api-key=G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
+    console.log(url)
+    const res = await fetch(url)
+    console.log(res)
+    return res
+
+}
+
 // app key:
 // G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E
 // https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey
+// https://api.nytimes.com/svc/topstories/v2/home.json?api-key=yourkey
