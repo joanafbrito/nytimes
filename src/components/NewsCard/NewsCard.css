@@ -4,15 +4,25 @@
 }
 
 .article-card-container {
-    width: 300px;
+    display: block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-position: center;
+    background-position: center;
+    width: 100%;
+    object-fit: cover;
+
+    /* width: 280px;
     height: 200px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; */
     
 }
 
 .article-card-img {
     width: 60%;
+    padding: 2em;
 }
 
 .p-card-container {
