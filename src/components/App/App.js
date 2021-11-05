@@ -113,7 +113,7 @@ const App = () => {
                     src="https://www.thetascgroup.com/tasc-media/uploads/2020/04/new-york-times-logo-large-e1439227085840.jpg"
                     alt="logo"
                   />
-                  <p>I'm in the second page { topNews[2].title }</p>   
+                  <p>I'm in the second page</p>   
                   <p>{newsId}</p>
                 </main>
               }
