@@ -1,22 +1,23 @@
 .article-card {
     display: flex;
     margin: 1em;
+    width: 50vw;
 }
 
 .article-card-container {
-    display: block;
+    /* display: block;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-background-position: center;
     background-position: center;
-    width: 100%;
-    object-fit: cover;
+    width: 30%;*/
+    object-fit: cover; 
 
-    /* width: 280px;
+    width: 30vw;
     height: 200px;
     display: flex;
-    flex-direction: row-reverse; */
+    flex-direction: row-reverse;
     
 }
 
