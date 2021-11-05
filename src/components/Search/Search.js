@@ -17,7 +17,7 @@ const Search = ({ getCategoryInput }) => {
             <input
                 className='search-bar'
                 type='text'
-                placeholder='Category ex: sports'
+                placeholder='Section ex: sports'
                 name='userInput'
                 // value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
