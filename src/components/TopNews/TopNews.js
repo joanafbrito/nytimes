@@ -1,12 +1,11 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import './TopNews.css';
 
-const TopNews = ({ id, category, title, author, date, snippet, img }) => {
-    let d = date.split('T')
-    console.log('here ', d)
+const TopNews = ({ topNewsData }) => {
+    console.log('top news ', topNewsData)
+    
     return (
-        // <Link className='link-to-article-details' to={} >
+        
             <article className='article-details'>
                 <div className='article-details-container'>
                     <img className='article-details-img' src={ img } alt={ title }/>
@@ -18,7 +17,6 @@ const TopNews = ({ id, category, title, author, date, snippet, img }) => {
                     </div>
                 </div>
             </article>
-        // </Link>
     )
 }
 
