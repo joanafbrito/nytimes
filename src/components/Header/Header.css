@@ -3,8 +3,8 @@
     align-items: center; 
     justify-content: space-around;
     height: 12vh;
-    background-color: #f0f1f2;
-    border-bottom: 0.5px solid black;
+    background-color: rgba(237, 234, 234, 0.516);
+    border-bottom: 0.5px solid #8080807a;
     width: 100vw;
     padding: 0 5px;
 }
@@ -15,12 +15,12 @@
 
 a .company-name {
     margin: 0;
-    color: black;
+    color: black;   
 }
 
 a .company-name:hover {
     margin: 0;
-    color: white;
+    color: #f83646;     
 }
 
 .search {
