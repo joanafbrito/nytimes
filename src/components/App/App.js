@@ -9,6 +9,7 @@ import AllNews from "../AllNews/AllNews";
 import TopNews from "../TopNews/TopNews";
 import Loading from "../Loading/Loading";
 import "./App.css";
+import NewsDetails from "../NewsDetails/NewsDetails";
 
 const App = () => {
   const [news, setNews] = useState('');
@@ -71,11 +72,11 @@ const App = () => {
     invokeNewsData();
   }, [category]);
 
-  const findSelectedNews = (id) => {
-    const selectedNews =  news.find(article => article.id === id)  
-    setSelectedNews(selectedNews)
-    console.log(selectedNews)
-  }
+  // const findSelectedNews = (id) => {
+  //   const selectedNews = news.find(article => article._id === id)  
+  //   setSelectedNews(selectedNews)
+  //   // console.log(selectedNews)
+  // }
 
   return (
     <div className="App">
@@ -97,7 +98,7 @@ const App = () => {
                   <h3 className='title-decore'> ///<span className='news-title'> TOP NEWS </span>///</h3>
                   <TopNews topNewsData={ topNews }/>
                   <h3 className='title-decore'>/// <span className='news-title'>{upperCaseCategory} NEWS </span>///</h3>   
-                  <AllNews newsData={news} key={news.length} findSelectedNews={findSelectedNews} category={category}/>
+                  <AllNews newsData={news} key={news.length} category={category}/>
                 </main>
               }
               <Footer />
@@ -108,7 +109,7 @@ const App = () => {
           const newsId = match.params.id;
           return (
           <section className="full-page">
-              <Header updateCategory={updateCategory} />
+              <Header updateCategory={updateCategory}/>
               {(isLoading && !error) && <Loading />}
               {(!isLoading && !error && news && topNews) && 
                 <main className="main-body">
@@ -117,8 +118,8 @@ const App = () => {
                     src="https://www.thetascgroup.com/tasc-media/uploads/2020/04/new-york-times-logo-large-e1439227085840.jpg"
                     alt="logo"
                   />
+                  <NewsDetails news={news}/>
                   <p>I'm in the second page</p>   
-                  <p>{newsId}</p>
                 </main>
               }
               <Footer />
