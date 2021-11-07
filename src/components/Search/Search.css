@@ -8,11 +8,9 @@
     background-color: white;
     border: 1px solid #e3e3e3;
     border-radius: 16px;
-    border-color: #ce7371;
+    border-color: #8080807a;
     box-sizing: border-box;
-    box-shadow: 0 0 10px #f2d4c6;
-    /* margin-right: 40px; */
-   
+    box-shadow: 0 0 10px #f9767763; 
 }
 
 .search-bar {
