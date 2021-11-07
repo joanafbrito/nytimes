@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NewsCard.css';
 
-const NewsCard = ({ id, category, title, author, date, snippet, img, findSelectedNews }) => {
-    
+const NewsCard = ({ id, category, title, author, date, snippet, img}) => {
+
     return (
-        <Link className='link-to-article-details' to={`/${id}`} onClick={() => {findSelectedNews(id)}} >
+        <Link className='link-to-article-details' to={`/${id}`} >
             <article className='article-card'>
                 <div className='article-card-container'>
                     <img className='article-card-img' src={ img } alt={ title }/>
