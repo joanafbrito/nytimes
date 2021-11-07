@@ -1,10 +1,7 @@
 export const getNewsData = async (category) => {
     let key = 'G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
     let url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${category}&api-key=${key}`
-    // let url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=sports&api-key=G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
-    console.log(url)
     const res = await fetch(url)
-    console.log(res)
     return res
 
     // ESSE EH O ENDERECO DA IMAGEM:
@@ -14,14 +11,12 @@ export const getNewsData = async (category) => {
 export const getTopNewsData = async () => {
     let key = 'G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
     let url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${key}`
-    // let url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=sports&api-key=G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
-    console.log(url)
     const res = await fetch(url)
-    console.log(res)
     return res
 
 }
 
+// Api info
 // app key:
 // G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E
 // https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey
