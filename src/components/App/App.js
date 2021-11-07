@@ -97,7 +97,7 @@ const App = () => {
                   <h3 className='title-decore'> ///<span className='news-title'> TOP NEWS </span>///</h3>
                   <TopNews topNewsData={ topNews }/>
                   <h3 className='title-decore'>/// <span className='news-title'>{upperCaseCategory} NEWS </span>///</h3>   
-                  <AllNews newsData={news} key={news.length} findSelectedNews={findSelectedNews}/>
+                  <AllNews newsData={news} key={news.length} findSelectedNews={findSelectedNews} category={category}/>
                 </main>
               }
               <Footer />

@@ -2,13 +2,15 @@ import React from "react";
 import NewsCard from "../NewsCard/NewsCard";
 import "./AllNews.css";
 
-const AllNews = ({ newsData, findSelectedNews }) => {
+const AllNews = ({ newsData, findSelectedNews, category }) => {
 
   const articlesData = newsData.map((article) => {
     let imgUrl = article.multimedia[9].url;
     let img = `https://www.nytimes.com/${imgUrl}`;
 
-    return (
+
+    // if (article.section_name == category) { 
+    return (      
       <NewsCard
         key={article.id}
         id={article.id}
