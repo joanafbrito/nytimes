@@ -1,13 +1,11 @@
 .header {
     display: flex;
     align-items: center; 
-    /* in use space -between need to add margin to search and company name */
-    /* justify-content: space-between; */
     justify-content: space-around;
     height: 12vh;
     background-color: #f0f1f2;
-    border-bottom: 1px solid black;
-    /* width: 100vw; */
+    border-bottom: 0.5px solid black;
+    width: 100vw;
     padding: 0 5px;
 }
 
