@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './Search.css';
 
-const Search = ({ getCategoryInput }) => {
+const Search = ({ updateCategory }) => {
 
     const [userInput, setUserInput] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        getCategoryInput(userInput)
-        // setUserInput('')
+        updateCategory(userInput)
     }
 
 

@@ -10,8 +10,7 @@ const Header = (params) => {
             <Link to='/'>
                 <h1 className='company-name'>NY Times</h1>
             </Link>
-            {/* <Search getCategoryInput= {(userInput) => setUserInput(updateCategory)}/> */}
-            <Search getCategoryInput= {params.updateCategory}/>
+            <Search updateCategory= {params.updateCategory}/>
 
         </header>
     )
