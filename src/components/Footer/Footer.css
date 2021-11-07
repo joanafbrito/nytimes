@@ -1,5 +1,6 @@
 .footer {
-    background-color: #8f8c8cad;
+    background-color: #ffffff;
+    border-top: 1px solid black;
     height: 10vh;
     text-align: center;
 }
