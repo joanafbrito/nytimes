@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   background-color: azure;
+  font-family: ui-serif;
 }
 
 .main-body {
@@ -21,6 +22,14 @@
 .nytimes-logo {
   margin-top: 0.2em;
   height: 10vmin;
+}
+
+.title-decore {
+  color: gray;
+}
+
+.news-title { 
+  color: red;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {

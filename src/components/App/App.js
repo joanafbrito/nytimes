@@ -18,13 +18,15 @@ const App = () => {
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true);
 
+  let upperCaseCategory = category.toUpperCase();
+
   const invokeNewsData = async (input) => {
     setIsLoading(true);
     try {
       const res = await getNewsData(input || category);
       checkErrors(res);
       const returnedNews = await res.json();
-      console.log('news ----',returnedNews.response.docs);
+      // console.log('news ----',returnedNews.response.docs);
       setNews(returnedNews.response.docs);
       setIsLoading(false);
     } catch (err) {
@@ -38,7 +40,7 @@ const App = () => {
       const res = await getTopNewsData();
       checkErrors(res);
       const returnedTopNews = await res.json();
-      console.log('top news ****', returnedTopNews.results[0].title);
+      // console.log('top news ****', returnedTopNews.results[0].title);
       setTopNews(returnedTopNews.results);
       setIsLoading(false);
     } catch (err) {
@@ -61,11 +63,6 @@ const App = () => {
     setCategory(input);
   };
 
-  const findSelectedNews = (id) => {
-    const selectedNews =  news.data.find(article => article.id === id)  
-    setSelectedNews(selectedNews)
-  }
-
   useEffect(()=> {
     invokeTopNewsData();
   },[])
@@ -73,6 +70,12 @@ const App = () => {
   useEffect(() => {
     invokeNewsData();
   }, [category]);
+
+  const findSelectedNews = (id) => {
+    const selectedNews =  news.find(article => article.id === id)  
+    setSelectedNews(selectedNews)
+    console.log(selectedNews)
+  }
 
   return (
     <div className="App">
@@ -91,8 +94,9 @@ const App = () => {
                     src="https://www.thetascgroup.com/tasc-media/uploads/2020/04/new-york-times-logo-large-e1439227085840.jpg"
                     alt="logo"
                   />
+                  <h3 className='title-decore'> ///<span className='news-title'> TOP NEWS </span>///</h3>
                   <TopNews topNewsData={ topNews }/>
-                  <p>{ topNews[0].title }</p>   
+                  <h3 className='title-decore'>/// <span className='news-title'>{upperCaseCategory} NEWS </span>///</h3>   
                   <AllNews newsData={news} key={news.length} findSelectedNews={findSelectedNews}/>
                 </main>
               }
