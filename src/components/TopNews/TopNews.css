@@ -1,15 +1,23 @@
 .topNew {
     display: flex;
-    width: 100vw;
-    /* margin: 4em; */
+    flex-direction: column;
+    align-items: center;
+    /* width: 100vw; */
+    margin: 0 4em;
+    padding-bottom: 2em;
     justify-content: center;
+    background-color: #f0f1f2;
 }
 
 .topNew-container {
-    width: 50%;
+    width: 55%;
     /* width: 600px; */
     /* height: 250px; */
     display: flex;
+    border: 3px solid white;
+    /* padding: 1em; */
+    align-items: center;
+    height: 280px;
     /* flex-direction: row-reverse; */
     
 }
@@ -23,6 +31,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: wheat;
-    padding: 3em;
+    background-color: #ffffff;
+    /* padding: 3em; */
 }

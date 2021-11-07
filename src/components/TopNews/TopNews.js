@@ -9,6 +9,7 @@ const TopNews = ({ topNewsData }) => {
     return (
        
             <article className='topNew'>
+                <h3> ------/// Top News ///------ </h3>
                 <div className='topNew-container'>
                     <img className='topNew-img' src={ topNewImg } alt={ randomTopNew.title }/>
                     <div className='p-topNew-container'>
