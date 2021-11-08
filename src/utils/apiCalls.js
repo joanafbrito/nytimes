@@ -1,5 +1,5 @@
 export const getNewsData = async (category) => {
-    // console.log('here')
+    
     let key = 'G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
     let url = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${category}&api-key=${key}`
     const res = await fetch(url)
@@ -10,7 +10,7 @@ export const getNewsData = async (category) => {
 }
 
 export const getTopNewsData = async () => {
-    // console.log('cvbxvcxv bx vxbv')
+    
     let key = 'G66nUJYyQddyfK0QQGYg4WtpnnnNXG7E'
     let url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${key}`
     const res = await fetch(url)
