@@ -48,8 +48,6 @@ const App = () => {
   };
 
   const checkErrors = (res) => {
-    console.log(res)
-    console.log(res.status);
     if (!res.ok) {
       setError(res.status);
     }
