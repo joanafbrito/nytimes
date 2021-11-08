@@ -8,11 +8,10 @@ const ErrorMessage = ({ errorCode, clearError }) => {
         case 404:
           return (
             <section className='error-msg'>
-              <img src='images/broken-egg.png'
-                alt='broken egg'/>
+              <img src='https://d2emerge.com/wp-content/uploads/2018/04/IT-Ops-Times-Logo-1.png'
+                alt='It ops time error image'/>
               <h1>{errorCode}</h1>
-              <h2>Page Not Found. Return to <Link to='/' onClick={() => clearError()}>Home Page</Link></h2>
-              <p>Don't be discouraged. Everything breaks once in a while</p>
+              <h2>Page Not Found. Please <Link to='/' onClick={() => clearError()}>Home Page</Link></h2>
             </section>
           )
 
@@ -20,32 +19,29 @@ const ErrorMessage = ({ errorCode, clearError }) => {
             return (
               <section className='error-msg'>
                 <img src='https://d2emerge.com/wp-content/uploads/2018/04/IT-Ops-Times-Logo-1.png'
-                  alt='broken egg'/>
+                  alt='It ops time error image'/>
                 <h1>{errorCode}</h1>
-                <h2>Page Not Found. Return to <Link to='/' onClick={() => clearError()}>Home Page</Link></h2>
-                <p>Don't be discouraged. Everything breaks once in a while</p>
+                <h2>Page Not Found. Please <Link to='/' onClick={() => clearError()}>Try Again Later</Link></h2>
               </section>
             )
     
         case 500:
           return (
             <section className='error-msg'>
-              <img src='images/broken-egg.png'
-                alt='broken egg'/>
+              <img src='https://d2emerge.com/wp-content/uploads/2018/04/IT-Ops-Times-Logo-1.png'
+                alt='It ops time error image'/>
               <h1>{errorCode}</h1>
-              <h2>Experiencing Server Issues. Return to <Link to='/' onClick={() => clearError()}>Home Page</Link></h2> 
-              <p>Don't be discouraged. Everything breaks once in a while</p>
+              <h2>Experiencing Server Issues. Please <Link to='/' onClick={() => clearError()}>Try Again Later</Link></h2> 
             </section>
           )
     
         default: 
         return (
           <section className='error-msg'>
-            <img src='images/broken-egg.png'
-                alt='broken egg'/>
+            <img src='https://d2emerge.com/wp-content/uploads/2018/04/IT-Ops-Times-Logo-1.png'
+                alt='It ops time error image'/>
             <h1>{errorCode}</h1>
-            <h2>Experiencing Technical Diffifulties. Return to <Link to='/' onClick={() => clearError()}>Home Page</Link></h2> 
-            <p>Don't be discouraged. Everything breaks once in a while</p>
+            <h2>Experiencing Technical Diffifulties. Please <Link to='/' onClick={() => clearError()}>Try Again Later</Link></h2> 
           </section>
         )
       }
