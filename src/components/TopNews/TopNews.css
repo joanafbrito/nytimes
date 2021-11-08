@@ -4,9 +4,6 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    /* margin: 0 4em; */
-    /* padding-bottom: 2em; */
-    /* background-color: #f0f1f2; */
 }
 
 .topNew-container {
@@ -35,7 +32,6 @@
 .p-topNew-container {
     font-size: 12px;
     height: 280px;
-    /* height: 280px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
