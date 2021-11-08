@@ -15,7 +15,7 @@ const App = () => {
   const [news, setNews] = useState('');
   const [topNews, setTopNews] = useState('')
   const [category, setCategory] = useState("everything")
-  const [selectedNews, setSelectedNews] = useState('')
+  // const [selectedNews, setSelectedNews] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true);
 
@@ -66,17 +66,11 @@ const App = () => {
 
   useEffect(()=> {
     invokeTopNewsData();
-  },[])
+  },[topNews])
 
   useEffect(() => {
     invokeNewsData();
   }, [category]);
-
-  // const findSelectedNews = (id) => {
-  //   const selectedNews = news.find(article => article._id === id)  
-  //   setSelectedNews(selectedNews)
-  //   // console.log(selectedNews)
-  // }
 
   return (
     <div className="App">
@@ -87,6 +81,7 @@ const App = () => {
           render={() => (
             <section className="full-page">
               <Header updateCategory={updateCategory} />
+              {error && <div> helo I am an error : { error }</div>}
               {(isLoading && !error) && <Loading />}
               {(!isLoading && !error && news && topNews) && 
                 <main className="main-body">
