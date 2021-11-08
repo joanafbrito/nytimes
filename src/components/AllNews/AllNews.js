@@ -12,6 +12,8 @@ const AllNews = ({ newsData, findSelectedNews, category }) => {
 
 
     let new_id = article._id.split('/')[3]
+    let new_date = article.pub_date.split('T')[0]
+    console.log(new_date)
 
 
     // if (article.section_name == category) { 
@@ -23,7 +25,7 @@ const AllNews = ({ newsData, findSelectedNews, category }) => {
         title={article.headline.main}
         author={article.byline.original}
         snippet={article.snippet}
-        date={article.pub_date}
+        date={new_date}
         img={img}
         findSelectedNews={findSelectedNews}
       />
