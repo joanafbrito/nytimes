@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 import { getNewsData } from "../../utils/apiCalls";
 import { getTopNewsData } from "../../utils/apiCalls";
-import AllNews from "../AllNews/AllNews";
 import TopNews from "../TopNews/TopNews";
-import Loading from "../Loading/Loading";
-import "./App.css";
+import AllNews from "../AllNews/AllNews";
 import NewsDetails from "../NewsDetails/NewsDetails";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import "./App.css";
 
 const App = () => {
   const [news, setNews] = useState('');
   const [topNews, setTopNews] = useState('')
   const [category, setCategory] = useState("everything")
-  // const [selectedNews, setSelectedNews] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,7 +27,6 @@ const App = () => {
       const res = await getNewsData(input || category);
       checkErrors(res);
       const returnedNews = await res.json();
-      // console.log('news ----',returnedNews.response.docs);
       setNews(returnedNews.response.docs);
       setIsLoading(false);
     } catch (err) {
@@ -41,7 +40,6 @@ const App = () => {
       const res = await getTopNewsData();
       checkErrors(res);
       const returnedTopNews = await res.json();
-      // console.log('top news ****', returnedTopNews.results[0].title);
       setTopNews(returnedTopNews.results);
       setIsLoading(false);
     } catch (err) {
@@ -56,9 +54,9 @@ const App = () => {
     }
   };
 
-  // const clearError = () => {
-  //   setError('')
-  // }
+  const clearError = () => {
+    setError('')
+  }
 
   const updateCategory = (input) => {
     setCategory(input);
@@ -81,7 +79,11 @@ const App = () => {
           render={() => (
             <section className="full-page">
               <Header updateCategory={updateCategory} />
-              {error && <div> helo I am an error : { error }</div>}
+              {error && 
+              <ErrorMessage 
+              errorCode={error}
+              clearError={clearError}
+              />}
               {(isLoading && !error) && <Loading />}
               {(!isLoading && !error && news && topNews) && 
                 <main className="main-body">
@@ -113,8 +115,7 @@ const App = () => {
                     src="https://www.thetascgroup.com/tasc-media/uploads/2020/04/new-york-times-logo-large-e1439227085840.jpg"
                     alt="logo"
                   />
-                  <NewsDetails news={news}/>
-                  <p>I'm in the second page</p>   
+                  <NewsDetails news={news}/> 
                 </main>
               }
               <Footer />
