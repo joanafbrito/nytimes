@@ -6,7 +6,7 @@ import './NewsDetails.css';
 const NewsDetails = ({news}) => {
     const { id } = useParams();
 
-    const selectedNews = news.find((article) => article._id.split('/')[3] === id)      
+    const selectedNews = news.find((details) => details._id.split('/')[3] === id)      
     let imgUrl = selectedNews.multimedia[9].url;
     let newsDetailsImg = `https://www.nytimes.com/${imgUrl}`;
    
