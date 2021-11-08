@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Loading from "../Loading/Loading";
@@ -48,6 +48,7 @@ const App = () => {
   };
 
   const checkErrors = (res) => {
+    console.log(res)
     console.log(res.status);
     if (!res.ok) {
       setError(res.status);
@@ -64,7 +65,7 @@ const App = () => {
 
   useEffect(()=> {
     invokeTopNewsData();
-  },[topNews])
+  },[])
 
   useEffect(() => {
     invokeNewsData();
