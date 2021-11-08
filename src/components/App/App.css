@@ -1,0 +1,52 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: ui-serif;
+}
+
+.main-body {
+  height: 78vh;
+  width: 100vw;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: scroll;
+}
+
+.nytimes-logo {
+  margin-top: 0.2em;
+  height: 10vmin;
+}
+
+.title-decore {
+  color: gray;
+}
+
+.news-title { 
+  color: #ff0000c9;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .nytimes-logo {
+    animation: nytimes-logo-spin infinite 20s linear;
+  }
+}
+
+.nytimes-logo {
+  color: #61dafb;
+} */
+
+/* @keyframes nytimes-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

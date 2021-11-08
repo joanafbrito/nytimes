@@ -1,0 +1,49 @@
+.article-card {
+    display: flex;
+    margin: 1em;
+    border-left: 0.5px solid gray;
+    text-align: left;
+    /* width: 20vw; */
+    /* justify-content: center; */
+}
+
+.article-card-container {
+    text-align: left;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+a.link-to-article-details {
+    text-decoration: none;
+}
+
+.article-card-img {
+    display: block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    width: 40%;
+    padding: 1em;
+}
+
+.p-card-container {
+    color: black;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1.5em;
+    text-align: left;
+}
+
+.article-card-title:hover {
+    color: red;
+    cursor: pointer;
+
+}
+

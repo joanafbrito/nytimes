@@ -1,0 +1,87 @@
+.topNew {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.topNew-container {
+    display: flex;
+    background-color:  white;
+    align-items: center;
+    height: 280px;
+    padding: 0.2em;   
+}
+
+.img-container {
+    width: 60%;
+}
+
+.topNew-img {
+    height: 280px;
+    display: block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+}
+
+
+.p-topNew-container {
+    font-size: 12px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 1em;
+}
+
+a.topNew-url {
+    text-decoration-color: black;
+    color: black;
+    font-size: larger;
+}
+
+a.topNew-url:hover {
+    text-decoration-color: red;
+    color: red;
+}
+
+/* ******************************* iPhoneX size **************************** */
+@media only screen and (max-width:600px ){
+  
+    .topNew {
+        width: none;
+    }
+
+    .topNew-container { 
+        flex-direction: column;
+        margin: 0.5em; 
+        height: 55vh; 
+    }
+
+    .img-container {
+        align-items: center;
+    }
+    .topNew-img {
+        height: none;
+        width: 110%;
+    }
+
+    .p-topNew-container {
+        justify-content: center;
+        padding: 0;
+        margin: 0.5em;
+    }
+
+    .topNew-section {
+        margin: 0;
+    }
+    .topNew-author {
+        margin: 0;
+    }
+
+  }

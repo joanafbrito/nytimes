@@ -1,0 +1,11 @@
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #8080807a;
+    height: 10vh;
+    text-align: center;
+}
+
+.nytimes-footer {
+    font-size: 15px;
+    margin:0;
+}

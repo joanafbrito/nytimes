@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    height: 12vh;
+    background-color: rgba(237, 234, 234, 0.516);
+    border-bottom: 0.5px solid #8080807a;
+    width: 100vw;
+    padding: 0 5px;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+a .company-name {
+    margin: 0;
+    color: black;   
+}
+
+a .company-name:hover {
+    margin: 0;
+    color: #f83646;     
+}
+
+.search {
+    font-size: 20px;
+}
