@@ -18,7 +18,6 @@ const TopNews = ({ topNewsData }) => {
                         <h3 className='topNew-title'>{randomTopNew.title}</h3>
                         <p className='topNew-section'><strong>{section_name}</strong></p>
                         <p className='topNew-author'> {randomTopNew.author}</p>
-                        {/* <p className='randomTopNew-card-date'> { randomTopNew. }</p> */}
                         <a className='topNew-url' href ={randomTopNew.url} > See on New York Times</a> 
                     </div>
                 </div>
