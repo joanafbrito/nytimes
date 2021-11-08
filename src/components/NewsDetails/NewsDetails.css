@@ -1,0 +1,61 @@
+.news-details-img {
+    width: 50vw;
+}
+.p-news-details-container {
+   display: flex;
+   flex-direction: column;
+   text-align: start;
+   margin: 2em 10em;
+}
+
+.news-details-section {
+    font-size: 12px;
+    text-align: end;
+}
+
+.news-details-main-title {
+    font-size: 22px;
+    text-align: center;
+    font-style: oblique;
+    margin: 0;
+}
+
+.news-details-title {
+    margin: 0;
+    text-align: center;
+    font-style: oblique;
+}
+
+.news-details-author {
+    margin: 1em 0;
+    font-size: 12px;
+    font-style: oblique;
+    text-align: end;
+}
+
+.news-details-snippet {
+    margin: 0;
+    text-align: justify;
+}
+
+.news-details-lead-paragraph {
+    margin: 0;
+    text-align: justify;
+}
+
+.news-details-url {
+    color:gray;
+}
+
+.news-details-url:hover {
+    color:#f83646;
+}
+
+/* ******************************* iPhoneX size **************************** */
+@media only screen and (max-width:600px ){
+
+    .p-news-details-container {
+        margin: 2em;
+        text-align: end;
+    }
+}
