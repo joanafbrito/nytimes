@@ -58,7 +58,7 @@
 
 
 
-[Deployed Site]()
+[Deployed Site](http://nytnewsapp.surge.sh)
 
 ### Tech Utilized
 
