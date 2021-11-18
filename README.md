@@ -31,6 +31,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
+- [Apis](#apis)
   - [Tech Utilized](#tech-utilized)
     - [Languages](#languages)
     - [Tools](#tools)
@@ -48,6 +49,14 @@
 - A “detailed” view for each article (as opposed to summary/list view)
 - Articles in the list must link to the detailed article view you create
 - Some sort of search, filter, OR sort.</br>
+
+## Apis
+
+- [Archive api](https://developer.nytimes.com/docs/archive-product/1/overview)
+  
+- [Top Stories api](https://developer.nytimes.com/docs/top-stories-product/1/overview)
+
+
 
 [Deployed Site]()
 
