@@ -22,7 +22,7 @@ const Search = ({ updateCategory }) => {
                 className='search-btn'
                 type='submit'
             >
-                <img className='mag-glass' src='https://media.istockphoto.com/vectors/magnifying-glass-icon-vector-id1179358933' alt='Search Magnifying Glass'/>
+                <img className='mag-glass' src='maGlassGray.png' alt='Search Magnifying Glass'/>
             </button>
         </form>
     )
